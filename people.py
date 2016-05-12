@@ -27,7 +27,7 @@ def people_generator (num_people):
     for i in xrange (num_people):
         person = {
                 'id': i,
-                'name': random,choice(names),
+                'name': random.choice(names),
                 'major': random.choice(majors)
                 }
         yield person
