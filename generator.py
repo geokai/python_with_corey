@@ -13,11 +13,14 @@
 
 my_nums = (x * x for x in [1,2,3,4,5])
 
-print (my_nums)
+print ()
+print (list(my_nums))
+print ()
 
-print ()
 #    print (next(my_nums))  # [1, 4, 9, 16, 25]
-for num in my_nums:
-    print (num)
-print ()
+
+#    print ()
+#    for num in my_nums:
+#        print (num)
+#    print ()
 
