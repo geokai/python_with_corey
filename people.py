@@ -2,6 +2,7 @@
 
 # This file was created on 12/05/2016
 # Author: George Kaimakis
+# This code from 'Generator tutorial' by Corey Schafer (https://www.coreyms.com)
 
 import mem_profile
 import random
@@ -10,11 +11,11 @@ import time
 names = ['John', 'Corey', 'Adam', 'Steve', 'Rick', 'Thomas']
 majors = ['Math', 'Engineering', 'CompSci', 'Arts', 'Business']
 
-print ('Memory (Before): {}Mb'.format (mem_profile.memory_usage_resource()))
+print('Memory (Before): {} Mb'.format(mem_profile.memory_usage_resource()))
 
-def people_list (num_people):
+def people_list(num_people):
     result = []
-    for i in xrange (num_people):
+    for i in range(num_people):
         person = {
                     'id': i,
                     'name': random.choice(names),
@@ -23,8 +24,8 @@ def people_list (num_people):
         result.append (person)
     return result
 
-def people_generator (num_people):
-    for i in xrange (num_people):
+def people_generator(num_people):
+    for i in range(num_people):
         person = {
                 'id': i,
                 'name': random.choice(names),
@@ -36,10 +37,10 @@ t1 = time.clock()
 people = people_list(1000000)
 t2 = time.clock()
 
-#t1 = time.clock()
-#people = people_generator(1000000)
-#t2 = time.clock()
+# t1 = time.clock()
+# people = people_generator(1000000)
+# t2 = time.clock()
 
-print ('Memory (Before): {}Mb'.format (mem_profile.memory_usage_resource()))
-print ("Took {} Seconds".format(t2-t1))
+print('Memory (After): {} Mb'.format (mem_profile.memory_usage_resource()))
+print("Took {} Seconds".format(t2-t1))
 
