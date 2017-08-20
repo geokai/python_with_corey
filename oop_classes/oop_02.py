@@ -49,25 +49,3 @@ class Employee:
         a new employee
         """
         pass
-
-
-emp_1 = Employee('george', 'kaimakis', 50000)
-emp_2 = Employee('Test', 'User', 60000)
-
-print("–" * 25)
-print("Number of employees: " + str(Employee.num_of_emps))
-print("–" * 25)
-
-print()
-# print(emp_1.__dict__)
-# print("emp 1 pay: " + str(emp_1.pay))
-# emp_1.apply_raise()
-# print(emp_1.__dict__)
-# print("emp 2 pay: " + str(emp_2.pay))
-# print()
-
-# print()
-print("Employee raise amount: " + str(Employee.raise_amt) + "%")
-print("emp_1 raise amount: " + str(emp_1.raise_amt))
-print("emp_2 raise amount: " + str(emp_2.raise_amt))
-print()
