@@ -1,8 +1,15 @@
-"""Unit_test script for 'employee_p1' class"""
+"""Unit_test script for 'employee_01.Employee' class"""
 
 import unittest
 from unittest.mock import patch
 from employee_01 import Employee
+
+
+# Python Object-Oriented Programming by Corey Schafer:
+# https://youtube.com/user/schafer5/playlist
+
+# This file was created on 19/08/2017
+# Author: George Kaimakis - https://github.com/geokai
 
 
 class TestEmployee(unittest.TestCase):
@@ -11,7 +18,7 @@ class TestEmployee(unittest.TestCase):
     """
     @classmethod
     def setUpClass(cls):
-        """run the following code before the last test"""
+        """run the following code before the first test"""
         # print('setUpClass\n')
 
     @classmethod
@@ -22,7 +29,7 @@ class TestEmployee(unittest.TestCase):
     def setUp(self):
         """run the following code before each test"""
         # print('setUp')
-        self.emp_1 = Employee('Corey', 'Schafer', 50000)
+        self.emp_1 = Employee('Corey', 'Schafer', 50000)    # note case:
         self.emp_2 = Employee('sue', 'SMITH', 60000)
 
     def tearDown(self):
@@ -56,7 +63,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.full_name, 'Jane Smith')
 
     def test_apply_raise(self):
-        """test that the pay raise percentage works correctly"""
+        """test that the pay raise method works correctly"""
         # print('test_apply_raise')
 
         self.emp_1.apply_raise()
@@ -81,6 +88,7 @@ class TestEmployee(unittest.TestCase):
             schedule = self.emp_2.monthly_schedule('June')
             mocked_get.assert_called_with('http://company.com/Smith/June')
             self.assertEqual(schedule, 'Bad Response!')
+
 
 if __name__ == '__main__':
     unittest.main()

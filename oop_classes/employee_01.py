@@ -37,7 +37,8 @@ class Employee:
 
     def monthly_schedule(self, month):
         """retreives a monthly schedule form a url/web page"""
-        response = requests.get(f'http://company.com/{self.last}/{month}')
+        response = requests.get\
+                (f'http://company.com/{self.last.title()}/{month.title()}')
         if response.ok:
             return response.text
         return 'Bad Response!'
