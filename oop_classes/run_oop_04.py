@@ -1,7 +1,7 @@
 """This is the user interface script to the 'oop.py' employee class file"""
 
 
-from oop_04 import Developer, Manager
+from oop_04 import Employee, Developer, Manager
 
 
 
@@ -11,10 +11,17 @@ dev_2 = Developer('TEST', 'EMPLOYEE', 60000, 'Java')
 mgr_1 = Manager('Sue', 'Smith', 90000, [dev_1])
 
 
-print(mgr_1.email)
-mgr_1.add_emp(dev_2)
-mgr_1.remove_emp(dev_1)
-mgr_1.print_emps()
+# use of 'isinstance' and 'issubclass' functions:
+print(isinstance(mgr_1, Manager))       # True
+print(isinstance(mgr_1, Developer))     # False
+print(issubclass(Developer, Employee))  # True
+print(issubclass(Manager, Developer))   # False
+
+
+# print(mgr_1.email)
+# mgr_1.add_emp(dev_2)
+# mgr_1.remove_emp(dev_1)
+# mgr_1.print_emps()
 
 # print(dev_1.full_name())
 # print(dev_1.email)
