@@ -1,5 +1,8 @@
 # files to be ignored in this repo
 
+
+code_snippets/
+
 *.pyc
 *.mpy
 
